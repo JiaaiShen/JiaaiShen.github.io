@@ -140,13 +140,13 @@ when I keep the $$\beta_0$$ fixed at 3.6 (figure 3).
 ![8-1.png](/images/8-1.png)
 
 I can see a clear minimum for $$\beta_1$$ at around -0.00625. However, this
-minimum for $$\beta_1$$ is for when $$\beta_0 = 3.6$$, a value I
+minimum for $$\beta_1$$ is for when $$\beta_0=3.6$$, a value I
 pick based on figure 2. I don’t know if (-0.00625, 3.6) is the pair that
 minimizes the equation across all possible pairs. The `lm` function can
 help me obtain the least squares estimates by fitting the linear model.
 
 I take a look at the model by using the `summary` function. I am given
-$$\beta_0 = 4.08$$ and $$\beta_1 = −0.01246$$, which are not
+$$\beta_0=4.08$$ and $$\beta_1=−0.01246$$, which are not
 far away from the (-0.00625, 3.6) pair obtained above. With an adjusted
 $$R^2$$ of 0.02662, it is fair to say that this isn’t a very
 good model and it is not the most informative model, but there is a
@@ -181,7 +181,7 @@ model, again, by using the `summary` function. This time, I am provided
 with much more least squares estimates given that the `review_date`
 column is a factor. It also shows that two of the years (2011 and 2015)
 can significantly impact the outcome based on a significance level
-$$\alpha = 0.05$$, but overall the effect isn’t as substantial as we might
+$$\alpha=0.05$$, but overall the effect isn’t as substantial as we might
 expect. Note that the value of the adjusted $$R^2$$ has risen
 from 0.02662 to 0.04097, which means that this linear model is better
 than the previous one.
@@ -202,11 +202,11 @@ try out since I have fitted two linear models in the previous section.
 By using the `lm` function again, I obtain an estimate of the regression
 line for predicting rating from cocoa percentage:
 
-$$\hat{f}(x) = 4.03 − 0.01183 x$$
+$$\hat{f}(x)=4.03−0.01183 x$$
 
 where the estimated intercept and slope are close to the least squares
-estimates obtained above, $$\beta_0 = 4.08$$ and
-$$\beta_1 = −0.01246$$. I then use the `predict` function to
+estimates obtained above, $$\beta_0=4.08$$ and
+$$\beta_1=−0.01246$$. I then use the `predict` function to
 predict ratings from cocoa percentages in the test set based on the
 fitted linear regression model. For comparison purpose, I compute the
 root mean squared error (RMSE) for this model.
